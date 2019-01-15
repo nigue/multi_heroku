@@ -12,28 +12,4 @@
         <module>library</module>
     <module>process</module>
   </modules>
-    <build>
-        <plugins>
-
-            <!-- Heroku Maven Plugin Configuration -->
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>2.0.3</version>
-                <configuration>
-                    <appName>heroku_sb_test</appName>
-                    <includeTarget>false</includeTarget>
-                    <includes>
-                        <include>${project.build.directory}/module/${project.build.finalName}.jar</include>
-                        <include>${project.build.directory}/process/${project.build.finalName}.jar</include>
-                    </includes>
-                    <jdkVersion>${java.version}</jdkVersion>
-                    <processTypes>
-                        <web>java $JAVA_OPTS -jar ${project.build.directory}/module/${project.build.finalName}.jar --spring.config.name=heroku</web>
-                        <web>java $JAVA_OPTS -jar ${project.build.directory}/process/${project.build.finalName}.jar --spring.config.name=heroku</web>
-                    </processTypes>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
