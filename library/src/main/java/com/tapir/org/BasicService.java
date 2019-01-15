@@ -7,7 +7,7 @@ public class BasicService {
     public BasicResponse getBasic(String saludo) {
         BasicResponse result = new BasicResponse();
         result.setCode(200);
-        result.setMsg(saludo);
+        result.setMsg(" servicio " + saludo);
         return result;
     }
 }
