@@ -3,7 +3,7 @@ package com.tapir.org.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customer")
+@Table(name = "basicType")
 public class BasicType {
 
     @Id

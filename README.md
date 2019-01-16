@@ -16,3 +16,6 @@ heroku addons -a heroku-sb-test-19283746
 
 Compartir un plugin entre proyectos
 heroku addons:attach postgresql-silhouetted-31201 -a multi-hk-module-0002
+
+curl https://multi-hk-module-0002.herokuapp.com/tapir/api/helloworld
+curl https://multi-hk-module-0002.herokuapp.com/tapir/api/type/all
