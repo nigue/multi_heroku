@@ -21,7 +21,7 @@ public class TestController {
 
     @RequestMapping("/api/helloworld")
     public ResponseEntity<BasicResponse> findAll(){
-        BasicResponse result = basicService.getBasic(saludo);
+        BasicResponse result = basicService.getBasic(" cambio en modulo " + saludo);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
