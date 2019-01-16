@@ -19,3 +19,6 @@ heroku addons:attach postgresql-silhouetted-31201 -a multi-hk-module-0002
 
 curl https://multi-hk-module-0002.herokuapp.com/tapir/api/helloworld
 curl https://multi-hk-module-0002.herokuapp.com/tapir/api/type/all
+
+curl https://multi-hk-process-0003.herokuapp.com/tapor/api/helloworld
+curl --header "Content-Type: application/json" --request POST --data '{"msg":"xyz"}' https://multi-hk-process-0003.herokuapp.com/tapor/api/typeSave
